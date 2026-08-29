@@ -1,366 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Literary Arts - Poesis</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Literary Arts - Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+    .card-title {
+      font-family: "Georgia", serif;
+    }
+    .modal-body {
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    .indent-paragraph {
+      text-indent: 2rem;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
+<body>
 
-<body class="literary-arts-page">
+  <div class="container py-5">
+    <h1 class="text-center mb-5 fw-bold">Literary Arts</h1>
 
-  <header id="header" class="header d-flex align-items-center position-relative">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Poesis</h1>
-      </a>
+      <!-- Card: Nebsen and Nebet-ta -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/la_phoebe.png" class="card-img-top" alt="Nebsen and Nebet-ta">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Nebsen and Nebet-ta</h5>
+            <p class="card-text text-muted">By Phoebe</p>
+            <button class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modal-nebsen-nebet-ta">Read Work</button>
+          </div>
+        </div>
+      </div>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="literaryarts.html" class="active">Literary Arts</a></li>
-          <li><a href="visualarts.html">Visual Arts</a></li>
-          <li><a href="mediaarts.html">Media Arts</a></li>
-          <li><a href="tc.html">Traditional Crafts</a></li>
-          <li><a href="performing.html">Performing Arts</a></li>
-          <li><a href="languagearts.html">Language Arts</a></li>
-          <li><a href="author-profile.html">About the Founder</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+      <!-- Card: Like a Release & Bleeding Hot Sweat -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/Likla_emily.png" class="card-img-top" alt="Like a Release & Bleeding Hot Sweat">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Like a Release & Bleeding Hot Sweat</h5>
+            <p class="card-text text-muted">By Clara</p>
+            <button class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modal-clara-prose">Read Work</button>
+          </div>
+        </div>
+      </div>
 
-      <div class="header-social-links">
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <!-- Card: Excerpt from Fear the Soul -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/Likla_emily.png" class="card-img-top" alt="Excerpt from Fear the Soul">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Excerpt from Fear the Soul</h5>
+            <p class="card-text text-muted">By Emily</p>
+            <button class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modal-fear-the-soul">Read Work</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: My Story Power System -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/la_hwang.png" class="card-img-top" alt="My Story Power System">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">My Story Power System</h5>
+            <p class="card-text text-muted">By Goden Hwang</p>
+            <button class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modal-power-system">Read Work</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card: In Loving Memory of Nancy Litwin -->
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="images/la_phoebe1.png" class="card-img-top" alt="In Loving Memory of Nancy Litwin">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">In Loving Memory of Nancy Litwin</h5>
+            <p class="card-text text-muted">By Phoebe</p>
+            <button class="btn btn-outline-dark mt-auto" data-bs-toggle="modal" data-bs-target="#modal-nancy-litwin">Read Work</button>
+          </div>
+        </div>
       </div>
 
     </div>
-  </header>
+  </div>
 
-  <main class="main">
+  <!-- ==================== MODALS ==================== -->
 
-    <!-- Page Title -->
-    <div class="page-title">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1 class="heading-title">Literary Arts</h1>
-              <p class="mb-0">
-                Exploring creative expression, written crafts, poetry, and narrative building through deep storytelling.
+  <!-- Modal: Nebsen and Nebet-ta -->
+  <div class="modal fade" id="modal-nebsen-nebet-ta" tabindex="-1" aria-labelledby="modalNebsenLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h4 class="modal-title fw-bold" id="modalNebsenLabel">Nebsen and Nebet-ta</h4>
+            <p class="text-muted mb-0">By Phoebe</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="images/la_phoebe.png" alt="Nebsen and Nebet-ta" class="img-fluid rounded mb-4 w-100">
+          
+          <p>Phoebe Woo is a rising senior from Media, Pennsylvania. Her work often centers around themes of love, family, and the sweeter details of life. Phoebe has been writing for as long as she can remember, and she believes that the arts are the strongest tools of empathy and connection between people. When she’s not writing, you can find her spending time with friends in the nearest coffee shop.</p>
+          
+          <p class="fst-italic text-center my-4">This poem was inspired by the Pair Statue of Nebsen and Nebet-ta in the Brooklyn Museum.</p>
+
+          <h4 class="text-center fw-bold mb-4">Nebsen and Nebet-ta</h4>
+
+          <div class="row fst-italic">
+            <!-- Nebsen Column -->
+            <div class="col-6">
+              <h5 class="fw-bold text-center mb-3">Nebsen</h5>
+              <p>
+                I write,<br>
+                adorn me with your touch, and<br>
+                fill me with your sacred spell, until<br>
+                everything fades but<br>
+                this shared tableau.<br>
+                unravel me and<br>
+                recognize<br>
+                a testament to the years spent<br>
+                tracing you<br>
+                in every corner of my skin.<br>
+                I extend myself past the breaking of my bones,<br>
+                if only to hold you<br>
+                light &nbsp;&nbsp; in this endless labyrinth of time<br>
+                only my hands, love, are here to feel your warmth;<br>
+                unite us now,
+              </p>
+            </div>
+
+            <!-- Nebet-ta Column -->
+            <div class="col-6">
+              <h5 class="fw-bold text-center mb-3">Nebet-ta</h5>
+              <p>
+                I sing,<br>
+                I have found reason.<br>
+                I have known desire.<br>
+                the stories we’ve woven from<br>
+                my hymns, your papyrus<br>
+                etch two more lovers into stone.<br>
+                if I may be remembered, it will be<br>
+                by your side<br>
+                in every lifetime,<br>
+                knowing no paradise but this.<br>
+                I lift myself from murky futures,<br>
+                as dimmer worlds crumble without your<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that has scrubbed all my color bare.<br>
+                only my eyes, love, remain to hold your gaze.<br>
+                fuse our sparking souls into one,
               </p>
             </div>
           </div>
-        </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Literary Arts</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
 
-    <!-- Categories Navigation Cards -->
-    <section id="categories" class="categories section light-background">
-      <div class="container" data-aos="fade-up">
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="card h-100 text-center shadow-sm">
-              <img src="images/la_article.png" class="card-img-top" alt="Articles">
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h5 class="card-title fw-bold my-3">Articles</h5>
-                <a href="#articles-section" class="btn btn-primary mt-2">Explore Articles</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="card h-100 text-center shadow-sm">
-              <img src="images/la_poetry.png" class="card-img-top" alt="Poetry">
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h5 class="card-title fw-bold my-3">Poetry</h5>
-                <a href="#poetry-section" class="btn btn-primary mt-2">Explore Poetry</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="card h-100 text-center shadow-sm">
-              <img src="images/la_prose.png" class="card-img-top" alt="Prose/Novel Excerpts">
-              <div class="card-body d-flex flex-column justify-content-between">
-                <h5 class="card-title fw-bold my-3">Prose / Novel Excerpts</h5>
-                <a href="#prose-section" class="btn btn-primary mt-2">Explore Prose</a>
-              </div>
-            </div>
-          </div>
+          <!-- Shared Closing Line -->
+          <p class="text-center fst-italic mt-2">
+            and carve us into eternity.
+          </p>
 
         </div>
-      </div>
-    </section>
-
-    <!-- Section 1: Articles -->
-    <section id="articles-section" class="posts section">
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Articles</span>
-        <h2>Articles</h2>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <article class="grid-post card h-100 p-3 shadow-sm">
-              <div class="post-img mb-3">
-                <img src="images/la_goden.png" alt="The HOW of World Building" class="img-fluid rounded" loading="lazy">
-              </div>
-              <div class="post-content">
-                <h3 class="title h4 fw-bold">
-                  <a href="#">The HOW of World Building</a>
-                </h3>
-                <p class="text-muted mb-0">By Goden Hwang</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <article class="grid-post card h-100 p-3 shadow-sm">
-              <div class="post-img mb-3">
-                <img src="images/la_dharsh.png" alt="The Importance of Literary Arts in Education" class="img-fluid rounded" loading="lazy">
-              </div>
-              <div class="post-content">
-                <h3 class="title h4 fw-bold">
-                  <a href="#">The Importance of Literary Arts in Education</a>
-                </h3>
-                <p class="text-muted mb-0">By Dharshwana Muralidharan</p>
-              </div>
-            </article>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 2: Poetry -->
-    <section id="poetry-section" class="posts section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Poetry</span>
-        <h2>Poetry</h2>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <article class="grid-post card h-100 p-3 shadow-sm">
-              <div class="post-img mb-3">
-                <img src="images/la_haritha.png" alt="Haritha’s Poetry Collection" class="img-fluid rounded" loading="lazy">
-              </div>
-              <div class="post-content">
-                <h3 class="title h5 fw-bold">
-                  <a href="#">Haritha’s Poetry Collection</a>
-                </h3>
-                <p class="text-muted mb-0">By Haritha</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <article class="grid-post card h-100 p-3 shadow-sm">
-              <div class="post-img mb-3">
-                <img src="images/la_nelly.png" alt="Nelly’s Poetry Collection" class="img-fluid rounded" loading="lazy">
-              </div>
-              <div class="post-content">
-                <h3 class="title h5 fw-bold">
-                  <a href="#">Nelly’s Poetry Collection</a>
-                </h3>
-                <p class="text-muted mb-0">By Nelly</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <article class="grid-post card h-100 p-3 shadow-sm">
-              <div class="post-img mb-3">
-                <img src="images/la_phoebe.png" alt="Nebsen and Nebet-ta" class="img-fluid rounded" loading="lazy">
-              </div>
-              <div class="post-content">
-                <h3 class="title h5 fw-bold">
-                  <a href="#">Nebsen and Nebet-ta</a>
-                </h3>
-                <p class="text-muted mb-0">By Phoebe</p>
-              </div>
-            </article>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3: Prose / Novel Excerpts -->
-    <section id="prose-section" class="posts section">
-      <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Prose / Novel Excerpts</span>
-        <h2>Prose / Novel Excerpts</h2>
-      </div>
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <article class="grid-post card h-100 p-3 shadow-sm">
-              <div class="post-img mb-3">
-                <img src="images/la_clara.png" alt="Like a Release & Bleeding Hot Sweat" class="img-fluid rounded" loading="lazy">
-              </div>
-              <div class="post-content">
-                <h3 class="title h6 fw-bold">
-                  <a href="#">Like a Release & Bleeding Hot Sweat</a>
-                </h3>
-                <p class="text-muted mb-0">By Clara</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-            <article class="grid-post card h-100 p-3 shadow-sm">
-              <div class="post-img mb-3">
-                <img src="images/la_emily.png" alt="Excerpt from Fear the Soul" class="img-fluid rounded" loading="lazy">
-              </div>
-              <div class="post-content">
-                <h3 class="title h6 fw-bold">
-                  <a href="#">Excerpt from Fear the Soul</a>
-                </h3>
-                <p class="text-muted mb-0">By Emily</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-            <article class="grid-post card h-100 p-3 shadow-sm">
-              <div class="post-img mb-3">
-                <img src="images/la_hwang.png" alt="My Story Power System" class="img-fluid rounded" loading="lazy">
-              </div>
-              <div class="post-content">
-                <h3 class="title h6 fw-bold">
-                  <a href="#">My Story Power System</a>
-                </h3>
-                <p class="text-muted mb-0">By Goden Hwang</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-            <article class="grid-post card h-100 p-3 shadow-sm">
-              <div class="post-img mb-3">
-                <img src="images/la_phoebe1.png" alt="In Loving Memory of Nancy Litwin" class="img-fluid rounded" loading="lazy">
-              </div>
-              <div class="post-content">
-                <h3 class="title h6 fw-bold">
-                  <a href="#">In Loving Memory of Nancy Litwin</a>
-                </h3>
-                <p class="text-muted mb-0">By Phoebe</p>
-              </div>
-            </article>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Poesis</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href="#"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="literaryarts.html">Literary Arts</a></li>
-            <li><a href="visualarts.html">Visual Arts</a></li>
-            <li><a href="author-profile.html">About the Founder</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Categories</h4>
-          <ul>
-            <li><a href="mediaarts.html">Media Arts</a></li>
-            <li><a href="tc.html">Traditional Crafts</a></li>
-            <li><a href="performing.html">Performing Arts</a></li>
-            <li><a href="languagearts.html">Language Arts</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Poesis</strong> <span>All Rights Reserved</span></p>
+  <!-- Modal: Like a Release & Bleeding Hot Sweat -->
+  <div class="modal fade" id="modal-clara-prose" tabindex="-1" aria-labelledby="modalClaraLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h4 class="modal-title fw-bold" id="modalClaraLabel">Like a Release & Bleeding Hot Sweat</h4>
+            <p class="text-muted mb-0">By Clara</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Hi! My name is Clara and I am a 16 year old living in Los Angeles. I love writing prose and poetry! Here are a couple of my pieces.</p>
+          
+          <hr class="my-4">
+
+          <h4 class="fw-bold mb-3">Like a release</h4>
+          <p class="indent-paragraph">I pretend to have read Vonnegut.</p>
+          <p class="indent-paragraph">There, in the spirit of the only good writing is the brutally honest kind, is my confession.</p>
+          <p class="indent-paragraph">Fake laughter fake laughter fake laughter. Toxins staying in. There is no setup. The punchline is the jumpscare waiting to happen. I’m trying I’m trying so hard I promise. Suzan-Lori Parks said laughter is like throwing up, like a release. I feel like throwing up when I try so hard to laugh. Fake laughter fake laughter fake laughter. I sneeze and remain unblessed. I am not the best and quite possibly the worst. But I think it’s good to be bad at this. If I have to trade a poem for a piece of truth I’ll do it. I’ll give every word away.</p>
+          <p class="indent-paragraph">Careful applause, given because it has to be. I run.</p>
+          <p class="indent-paragraph">The problem is that the more you like yourself the less funny you are. You don’t have a hunger and you don’t have a reason. I don’t consider myself very funny but I do hate myself and I think it helps. Is this maxim true? It is not. However, I really think it might be. Two truths are always true and in fact the minimum number. Maxim is a word I’ve been pretending to know a lot lately. I use it almost every day.</p>
+          <p class="indent-paragraph">I’m trying I’m trying I’m trying so hard. There is nothing but dead silence and fake laughter.</p>
+          <p class="indent-paragraph">I don’t know who the fuck Suzan Lori-Parks is or who she thinks she is to be able to tell me how throwing up feels. And yesterday I pretended to have read Vonnegut again. Last-name basis. I called his book only Slaughterhouse. I think it worked.</p>
+          <p class="indent-paragraph">It is 11:11, and now it is 11:12, and I don’t know what I want or believe in, except for real laughter.</p>
+          <p class="indent-paragraph">Fake laughter fake laughter fake laughter.</p>
+
+          <hr class="my-4">
+
+          <h4 class="fw-bold mb-3">bleeding hot sweat</h4>
+          <p class="indent-paragraph">Bleeding hot sweat East Village and I’m scared. I went on a walk next to the Hudson River but there was construction. So I guess I went on a walk by a construction site. Chemicals loud noises bright yellow cars black and white photos. Dark from white, blur, shift. I took a nap. I ate a pancake. Sticky sweet silence. Nauseous enough to be tired. Anticipation redhot enough to burn. Maybe I shouldn’t ruminate. Wondering in the dark how movies end. Everyone is tired and no one will nap. No one will talk about it. Everyone is faking this.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
     </div>
-  </footer>
+  </div>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Modal: Excerpt from Fear the Soul -->
+  <div class="modal fade" id="modal-fear-the-soul" tabindex="-1" aria-labelledby="modalFearLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h4 class="modal-title fw-bold" id="modalFearLabel">Excerpt from Fear the Soul</h4>
+            <p class="text-muted mb-0">By Emily</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Emily Appleyard is a speculative fiction author living in the New York metropolitan area who loves to write character-driven stories and hopes to one day complete a full length-novel. Creative writing is the vessel through which she has learned to unpack and explore the various facets of our world, but most importantly, writing and engaging with other creatives is what makes her life so much brighter.</p>
+          
+          <hr class="my-4">
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+          <h4 class="fw-bold mb-3">Excerpt</h4>
+          <p class="indent-paragraph">The lighting cast by the hanging fixtures bathed the church in a warm glow, a welcome respite from the harsh brightness of the outside world. It washed the two flags, one for America, one for Arkansas, out; their lurid blues and reds softened and restrained as if they had been bleached by the furious summer sun. In this place, God took precedence over all else. State loyalty, proud patriotism, and familial love—it all played second fiddle to Him. Those emotions existed ancillary to God, a means through which a faithful Christian could brush up against Him, could get as close as He would allow.</p>
+          <p class="indent-paragraph">Adina ran her hands over her skirt, absentmindedly pushing the pleats between the gaps of her fingers. The cotton brushed against her skin, and a peculiar sense of satisfaction washed over her. She bit her tongue to prevent a smile from slipping onto her face. She was in no mood to call upon Pastor Dawson’s attention, her eyes bleary and voice wobbly after two nights of tossing and turning under her floral covers.</p>
+          <p class="indent-paragraph">The pastor’s sermon barreled on, his harsh voice ricocheting off the wooden walls. His words were staccato, and he paused at the end of every sentence, daring a dissenter to shout him down. He searched for persecution in the eyes of his congregation, the one place he would never, could never find it. The outside world, of course, was a different story.</p>
+          <p class="indent-paragraph">“Why doesn’t Eliza come to church?” Adina, still small enough to need a cushion on her chair, asked her sister. All the kids in her homeschool Co-Op went to church at least once a week, if not more. All the kids except Eliza.</p>
+          <p class="indent-paragraph">Sarah, her older sister, was standing behind her, gingerly weaving lily white ribbons into her golden hair. Her sister’s touch was gentle and light, but the Dutch braids she had learned from the other girls at Bible camp were immaculate. “Her parents are Catholic, so they go to a Catholic church.”</p>
+          <p class="indent-paragraph">“Oh.” Adina frowned. “They should come to our church.” Her stomach squeezed sharply, imagining Eliza, who always shared her glitter pens with her, being turned away at the pearly gates, her name absent from the saint’s list.</p>
+          <p class="indent-paragraph">“Well, Mama got Eliza’s mom to come to her Bible study, so it shouldn’t be long before she joins us," her sister said, patting Adina’s head reassuringly.</p>
+          <p class="indent-paragraph">“But what if she doesn’t?”</p>
+          <p class="indent-paragraph">“She will,” Sarah said, tying a neat bow at the end of Adina’s braid.</p>
+          <p class="indent-paragraph">“But what if she doesn’t?”</p>
+          <p class="indent-paragraph">Her sister had no reply.</p>
+          <p class="indent-paragraph">Adina jolted upright. She pinched the skin on the back of her hand, and prayed that Pastor Dawson had not noticed her slipping into her daydreams. Mama glanced at her, thin lips pursed in consideration. Adina hastily shook her head and fixed her gaze on the pulpit.</p>
+          <p class="indent-paragraph">“If the devil can sink his claws into you once, and convince you to ignore the wound, then the infection of evil will slowly kill you and rot your soul beyond salvation,” Pastor Dawson lectured, spit flying from his maw. “Because of this, God requires us to be constantly on guard against the temptations of the world. It is the most righteous that Satan hounds, desperate to steal the shepherds from the sheep."</p>
+          <p class="indent-paragraph">“Amen!” A greying woman shouted from the front row. Dread wafted off her, enduring and devoted; devoted to her husband, her high school sweetheart, her first and last love. He’s a smart man, smarter than any man in this town ought to be, but he’s dumb about God. Pushing back being born again—can’t he see they’re getting old?</p>
+          <p class="indent-paragraph">The heaviness lifted from Adina’s eyelids, and her heart enthusiastically began to pump blood, waking her spindly limbs from their lethargy. Something slithered across her hindbrain and down her spine, something inborn and tortuously familiar. Something that missed dense grass and rolling hills, the scent of salt and iron in the air, a boyish laugh and a nudging shoulder…</p>
+          <p class="indent-paragraph">Adina steeled her mind against the onslaught of foreign terror and the confused sensations it unleashed. <em>I am not my thoughts, I am not my thoughts;</em> she resisted her lifelong affliction, her sixth sense that smelt fear like a scent hound, and her voracious spirit that lapped it up like sweet tea on a hot summer’s day.</p>
+          <p class="indent-paragraph">Her jaw quivered. <em>I am not my thoughts.</em></p>
+          <p class="indent-paragraph">This phrase, this litany, provided her scant comfort.</p>
+          <p class="indent-paragraph">After all, what comfort could prayer bring a rotten soul?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- Modal: My Story Power System -->
+  <div class="modal fade" id="modal-power-system" tabindex="-1" aria-labelledby="modalPowerSystemLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h4 class="modal-title fw-bold" id="modalPowerSystemLabel">My Story Power System</h4>
+            <p class="text-muted mb-0">By Goden Hwang</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="indent-paragraph">The following article will explicate my story’s power system, emphasizing how characters receive and use the powers that they are given. This is for the fantasy novel I am currently writing about.</p>
+          <p class="indent-paragraph">Resonance is the name of the power system. Resonance is defined by how integrated a being is with the world of Rizanor. Rizanor is not a coherent, single whole, but is instead a yarnball of threads that are tangible manifestations of different aspects of reality. Almost every single living and non-living thing has resonance in varying degrees for every single thread of reality.</p>
+          <p class="indent-paragraph">Now, certain individuals have what is called "Resonant Manifestation," which is where one becomes Resonant enough with a specific thread of reality to be able to exert influence over that thread. Resonant Manifestations result in what are traditionally called "superpowers". Those who do not manifest resonance are still resonant, but for those who don't manifest it is called "Resonant Latency". Those with Resonant Latency are mostly anyone who is "good" at something.</p>
+          <p class="indent-paragraph">A master chef has Resonant Latency with the threads of reality of cooking or food, and the same is true for musicians, painters, blacksmiths, soldiers, and everyone else. Obviously, manifestation and latency are not mutually exclusive, an individual with resonant manifestation can also have resonant latency with that same thread or a different one. Furthermore, a person can be resonant to multiple threads of reality, but it's less common than resonance with a single thread.</p>
+          <p class="indent-paragraph">Because almost everything has a thread of reality (in varying degrees of power and influence), a person can be resonant with almost anything. Among these countless threads of reality, which one you become resonant with depends almost entirely on the person. The individual's goals, personality, likes, dislikes, experiences, knowledge, and countless other things all culminate into resonance. Because resonance is dependent on the individual, resonance can change if the person undergoes change. But this is not common; someone must truly experience a substantial new experience, or undergo major change.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Modal: In Loving Memory of Nancy Litwin -->
+  <div class="modal fade" id="modal-nancy-litwin" tabindex="-1" aria-labelledby="modalNancyLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h4 class="modal-title fw-bold" id="modalNancyLabel">In Loving Memory of Nancy Litwin</h4>
+            <p class="text-muted mb-0">By Phoebe</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Phoebe Woo is a rising senior from Media, Pennsylvania. Her work often centers around themes of love, family, and the sweeter details of life. Phoebe has been writing for as long as she can remember, and she believes that the arts are the strongest tools of empathy and connection between people. When she’s not writing, you can find her spending time with friends in the nearest coffee shop.</p>
+
+          <p class="fst-italic text-center my-4">This short piece was inspired by a bench plaque on the Brooklyn Promenade.</p>
+
+          <h4 class="text-center fw-bold mb-4">In Loving Memory of Nancy Litwin</h4>
+
+          <p class="indent-paragraph">Not long ago you were a daughter, neighbor, student, friend. Only two years have passed since you last blinked the sleep from your eyes, inhaled the dew of a dawning city that knew you, loved you, and now remembers you. Somewhere someone carries you in their jacket pocket, wearing your tattered handkerchief until it bores new holes where fingers should be. Somewhere someone else reads your name for the first time.</p>
+          <p class="indent-paragraph">Now you sprawl across the better half of Brooklyn, polished silver amid a tangle of wood and rust. You’re flanked by fellow dedications to friends and children and lovers, all remembered, all loved. You’re in good company. Side-by-side you sit, an ensemble of legacies New York has left behind, and take in the blooming world. Up ahead is a jogger with neon orange sneakers, sweating to outstrip his latest pace. A little behind him walks an elderly man, tapping his cane to a rhythm only he can hear and smiling faintly at the view. There’s a polite bubble of laughter; a tour group has just passed. If you listen closely enough, you can make out a mother, father, daughter, and son, who speak in a slightly slower cadence from their chipper guide. All around, footsteps overlap and overtake one another, drumming a rippling beat as the city thunders on.</p>
+          <p class="indent-paragraph">Perhaps it’s familiar to you, cupping a stranger’s weary back, offering a moment of relief and release from the sweltering heat. After all, this is how someone chose to immortalize you, engulfing your name in their gratitude like a bee in resin. Perhaps they thought it fitting, to gift you an eternal skyline that claims you as one of its own. Now every passing stranger will love, and remember, you too.</p>
+          <p class="indent-paragraph">Overhead, the air is ablaze with a guttural hum, marking the flight of a different sort of bird. These creatures breathe gas and fuel, with steel for wings and engines for bellies that groan their arrival at every stage. Fat white bullets streak latticed paths across the sky, mirroring the steady migration of ships below. Can you hear the notes of nature’s birds, just beneath the clamor? They sing a softer tune, but even this is proof of the great continuation. Metal and feathers coexist in one long pathway, and so do you.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
