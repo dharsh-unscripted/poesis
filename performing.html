@@ -1,88 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Performing Arts - Theatre</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; background-color: #f9f9f9; }
-        header { background-color: #2c3e50; color: #fff; padding: 1rem 0; }
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 20px; }
-        nav a { color: #fff; text-decoration: none; font-weight: bold; }
-        nav a.active { border-bottom: 2px solid #e74c3c; }
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 20px; }
-        .intro-section h1 { color: #2c3e50; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
-        .category-section { margin: 2rem 0; text-align: center; }
-        .category-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .category-card img { max-width: 100%; height: auto; border-radius: 6px; }
-        .plays-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 2rem; }
-        .play-card { background: #fff; border-radius: 8px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; text-decoration: none; color: inherit; transition: transform 0.2s ease-in-out; display: block; }
-        .play-card:hover { transform: translateY(-5px); }
-        .play-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 6px; }
-        .play-card h3 { margin: 15px 0 5px; color: #2c3e50; }
-        .play-card .author { font-style: italic; color: #666; margin-bottom: 15px; }
-        .btn-read { display: inline-block; background-color: #e74c3c; color: #fff; padding: 8px 16px; border-radius: 4px; font-weight: bold; }
-        footer { text-align: center; padding: 20px; background: #2c3e50; color: white; margin-top: 4rem; }
-    </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Performing Arts - Poesis</title>
+  <meta name="description" content="Performing Arts projects at Poesis">
+  <meta name="keywords" content="Performing Arts, Theatre, Student Plays, Poesis">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
-<body>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="traditionalcrafts.html">Traditional Crafts</a></li>
-                <li><a href="performing.html" class="active">Performing Arts</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="category-page">
 
-    <main class="container">
-        <section class="intro-section">
-            <h1>Performing Arts</h1>
-            <p>
-                Performing arts are not simply about entertainment[cite: 1]. It's an embodied form of learning, where students discover that knowledge lives in gesture, movement, and voice[cite: 1]. Through theater, dance, and music performance, students learn to communicate beyond words and to collaborate in real time, attuning themselves to others in ways that require trust and vulnerability[cite: 1]. We live in a world increasingly mediated by screens and digital interaction[cite: 1]. Thus, there is inherent value in learning to be fully present in physical space, to take creative risks in front of others, and to understand that our bodies carry meaning[cite: 1].
-            </p>
-        </section>
+  <header id="header" class="header d-flex align-items-center position-relative">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
 
-        <section class="category-section">
-            <div class="category-card">
-                <img src="images/pa_theatre.jpg" alt="Theatre Main Image">
-                <h2>Theatre</h2>
-                <p>Select a play below to read the student-written script[cite: 2].</p>
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename">Poesis</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="literaryarts.html">Literary Arts</a></li>
+          <li><a href="visualarts.html">Visual Arts</a></li>
+          <li><a href="mediaarts.html">Media Arts</a></li>
+          <li><a href="traditionalcrafts.html">Traditional Crafts</a></li>
+          <li><a href="performing.html" class="active">Performing Arts</a></li>
+          <li><a href="languagearts.html">Language Arts</a></li>
+          <li><a href="author-profile.html">About the Founder</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-10">
+              <h1 class="heading-title">Performing Arts</h1>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Performing Arts</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
 
-        <section class="plays-grid">
-            <!-- Option 1 -->
-            <a href="two-brave-ducks.html" class="play-card">
-                <img src="images/pa_clara.jpg" alt="Two Brave Ducks">
-                <h3>1. TWO BRAVE DUCKS</h3>
-                <p class="author">By Clara</p>
-                <span class="btn-read">Read Script</span>
+    <div class="container my-5">
+
+      <!-- Category Intro Text -->
+      <div class="row mb-5 justify-content-center">
+        <div class="col-lg-10">
+          <p class="lead text-muted">
+            Performing arts are not simply about entertainment. It's an embodied form of learning, where students discover that knowledge lives in gesture, movement, and voice. Through theater, dance, and music performance, students learn to communicate beyond words and to collaborate in real time, attuning themselves to others in ways that require trust and vulnerability. We live in a world increasingly mediated by screens and digital interaction. Thus, there is inherent value in learning to be fully present in physical space, to take creative risks in front of others, and to understand that our bodies carry meaning.
+          </p>
+        </div>
+      </div>
+
+      <!-- Plays Grid (3 Separate Page Links) -->
+      <div class="row gy-4 justify-content-center">
+
+        <!-- Play 1 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 border-0 shadow-sm overflow-hidden">
+            <a href="two-brave-ducks.html" class="text-decoration-none text-dark">
+              <img src="images/pa_clara.jpg" alt="Two Brave Ducks" class="card-img-top object-fit-cover" style="height: 250px;">
+              <div class="card-body p-4 text-center">
+                <h5 class="card-title fw-bold">1. TWO BRAVE DUCKS</h5>
+                <p class="card-text text-muted small mt-2">By Clara</p>
+                <span class="btn btn-danger btn-sm mt-3 fw-bold px-3">Read Script</span>
+              </div>
             </a>
+          </div>
+        </div>
 
-            <!-- Option 2 -->
-            <a href="suburbia.html" class="play-card">
-                <img src="images/pa_mari.jpg" alt="Suburbia">
-                <h3>2. SUBURBIA</h3>
-                <p class="author">This play is written by Mari.</p>
-                <span class="btn-read">Read Script</span>
+        <!-- Play 2 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 border-0 shadow-sm overflow-hidden">
+            <a href="suburbia.html" class="text-decoration-none text-dark">
+              <img src="images/pa_mari.jpg" alt="Suburbia" class="card-img-top object-fit-cover" style="height: 250px;">
+              <div class="card-body p-4 text-center">
+                <h5 class="card-title fw-bold">2. SUBURBIA</h5>
+                <p class="card-text text-muted small mt-2">This play is written by Mari.</p>
+                <span class="btn btn-danger btn-sm mt-3 fw-bold px-3">Read Script</span>
+              </div>
             </a>
+          </div>
+        </div>
 
-            <!-- Option 3 -->
-            <a href="early-decision.html" class="play-card">
-                <img src="images/pa_renee.jpg" alt="Early Decision">
-                <h3>3. Early Decision</h3>
-                <p class="author">This is a play written by Renee</p>
-                <span class="btn-read">Read Script</span>
+        <!-- Play 3 -->
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 border-0 shadow-sm overflow-hidden">
+            <a href="early-decision.html" class="text-decoration-none text-dark">
+              <img src="images/pa_renee.jpg" alt="Early Decision" class="card-img-top object-fit-cover" style="height: 250px;">
+              <div class="card-body p-4 text-center">
+                <h5 class="card-title fw-bold">3. Early Decision</h5>
+                <p class="card-text text-muted small mt-2">This is a play written by Renee</p>
+                <span class="btn btn-danger btn-sm mt-3 fw-bold px-3">Read Script</span>
+              </div>
             </a>
-        </section>
-    </main>
+          </div>
+        </div>
 
-    <footer>
-        <p>&copy; 2026 Student Performing Arts Showcase. All rights reserved.</p>
-    </footer>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Poesis</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="literaryarts.html">Literary Arts</a></li>
+            <li><a href="visualarts.html">Visual Arts</a></li>
+            <li><a href="author-profile.html">About the Founder</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="mediaarts.html">Media Arts</a></li>
+            <li><a href="traditionalcrafts.html">Traditional Crafts</a></li>
+            <li><a href="performing.html">Performing Arts</a></li>
+            <li><a href="languagearts.html">Language Arts</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Poesis</strong> <span>All Rights Reserved</span></p>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
