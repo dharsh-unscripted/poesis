@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performing Arts - Theatre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a.active {
+            border-bottom: 2px solid #e74c3c;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        .intro-section h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .category-section {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .category-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .category-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+        .plays-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+        .play-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        .play-card:hover {
+            transform: translateY(-5px);
+        }
+        .play-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .play-card h3 {
+            margin: 15px 0 5px;
+            color: #2c3e50;
+        }
+        .play-card .author {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .btn-read {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #aaa;
+            cursor: pointer;
+        }
+        .close-btn:hover {
+            color: #000;
+        }
+        .script-body {
+            white-space: pre-wrap;
+            font-family: "Courier New", Courier, monospace;
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: left;
+            margin-top: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="traditionalcrafts.html">Traditional Crafts</a></li>
+                <li><a href="performing.html" class="active">Performing Arts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Main Performing Arts Section -->
+        <section class="intro-section">
+            <h1>Performing Arts</h1>
+            <p>
+                Performing arts are not simply about entertainment. It's an embodied form of learning, where students discover that knowledge lives in gesture, movement, and voice. Through theater, dance, and music performance, students learn to communicate beyond words and to collaborate in real time, attuning themselves to others in ways that require trust and vulnerability. We live in a world increasingly mediated by screens and digital interaction. Thus, there is inherent value in learning to be fully present in physical space, to take creative risks in front of others, and to understand that our bodies carry meaning.
+            </p>
+        </section>
+
+        <!-- Category: Theatre -->
+        <section class="category-section">
+            <div class="category-card">
+                <img src="images/pa_theatre.jpg" alt="Theatre Main Image">
+                <h2>Theatre</h2>
+                <p>Select a play below to read the student-written script.</p>
+            </div>
+        </section>
+
+        <!-- Play Cards Section -->
+        <section class="plays-grid">
+            
+            <!-- Option 1: Two Brave Ducks -->
+            <div class="play-card" onclick="openModal('modal-clara')">
+                <img src="images/pa_clara.jpg" alt="Two Brave Ducks">
+                <h3>1. TWO BRAVE DUCKS</h3>
+                <p class="author">By Clara</p>
+                <span class="btn-read">Read Script</span>
+            </div>
+
+            <!-- Option 2: Suburbia -->
+            <div class="play-card" onclick="openModal('modal-mari')">
+                <img src="images/pa_mari.jpg" alt="Suburbia">
+                <h3>2. SUBURBIA</h3>
+                <p class="author">This play is written by Mari.</p>
+                <span class="btn-read">Read Script</span>
+            </div>
+
+            <!-- Option 3: Early Decision -->
+            <div class="play-card" onclick="openModal('modal-renee')">
+                <img src="images/pa_renee.jpg" alt="Early Decision">
+                <h3>3. Early Decision</h3>
+                <p class="author">This is a play written by Renee</p>
+                <span class="btn-read">Read Script</span>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Modal 1: Clara Script -->
+    <div id="modal-clara" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-clara')">&times;</span>
+            <h2>TITLE: TWO BRAVE DUCKS</h2>
+            <p><em>By Clara</em></p>
+            <hr>
+            <div class="script-body">This humorous play is written by Clara, following two girls as they attempt to expose the perils of hot yoga.
+
+SCENE 3
+Lights up on LA's version of a pond, AKA a puddle that is larger than average. GINA and ALEXIS are perched on the side of this makeshift pond, tired and leaning against each other.
+
+GINA: I saw a duck here the other day.
+ALEXIS: That's so cool.
+GINA: I fucking wish I was a duck.
+ALEXIS: I know exactly what you mean.
+The moment is so perfectly simple.
+I feel that a large reason of my affinity for ducks is that I have no purpose.
+Pause.
+GINA: What?
+Another pause, only interrupted because...
+Enter BRUISER, a young woman in her 20s carrying a yoga mat with bleached blonde hair pulled back in a bun. She's wearing a Lululemon leggings set and is sweaty but somehow, it's glamorous. She spots ALEXIS and GINA and grins.
+
+BRUISER: Alexis! Gina! No way!
+ALEXIS and GINA make eye contact.
+ALEXIS (under her breath, beginning to squat to get up and out): No no no. No no no no no no.
+GINA (under breath, then calling out): We have to make friends it's been six months and we're watching ducks. Bruiser!!
+BRUISER: This is so crazy. What's up?
+ALEXIS: Oh, just phone.
+An awkward silence.
+GINA: What's up with you, buddy?
+Gina has made the situation much worse.
+BRUISER: Well, actually, I just had, like, an ethereal experience.
+She pauses, waiting to be asked to elaborate. ALEXIS and GINA look at each other.
+ALEXIS (genuinely trying really hard): Epic!
+Pause. BRUISER debates continuing. She decides, ultimately, to continue at a louder and more excited volume than before.
+BRUISER: At yoga, the teacher was this guy, Alden, and he was honestly like a seersayer.
+GINA: What?
+BRUISER: No, like he knew.
+GINA: Nice. What did what did he kno- sorry, what are you saying?
+BRUISER: It's fine, it's not important. But anyway, it was honestly so intense and I was DYING. It was like 100 degrees, and he was like "let's turn this up, yogies, until we can FEEL. THE HEAT." and we were like "noooo, Alden, you're torturing us!" It was amazing.
+ALEXIS laughs awkwardly and grins uncomfortably. She offers up:
+ALEXIS: That sounds... horrible.
+BRUISER laughs. For some reason, this was just what she wanted to hear.
+BRUISER: No but like, no pain no gain. Anyway. He was like a spiritual- what's the word? He was like a guru. I swear he knew how I was feeling.
+GINA: How were you feeling?
+BRUISER: Like, really hot.
+ALEXIS and GINA make eye contact.
+ALEXIS: Yeah, I bet he's a guru.
+BRUISER: Right? How did you two meet again? Was it through the program?
+GINA: Uh, yeah, in September.
+ALEXIS: That's right. We were the only two who had forgotten to say we wanted dorms, so we had to get an apartment together.
+GINA: Incredible. That is so incredible. It's harsh out here in grad school. Do they not just give you houses?
+ALEXIS: Right??
+BRUISER (hiding her confusion): Totally. Uh, Gina, you're a surfer, right?
+GINA: Yes, I love riding waves, especially medium-sized ones.
+GINA is immediately confused about why she said this.
+ALEXIS: I am the mother to eighteen fishes.
+Alexis lets that hang in the air for a minute. Stands by it.
+BRUISER: Love. Anyway. You guys have to come to yoga sometime. You're like the only people in a 10-mile radius who don't do it. Eva does it before work.
+ALEXIS: Wow.
+GINA grabs ALEXIS' arm from behind and starts shaking it.
+GINA: Uh, Bruiser, hey, if you wanna stick around, we've been watching some ducks by this puddle and we think they're gonna have sex soon.
+BRUISER: Um, I do have to go, I apologize. Next time.
+GINA: Of course. We understand.
+ALEXIS: Absolutely. You are the CEO of your own future.
+BRUISER: But hey - if you ever wanna come to yoga - first week is free, and I know all the best teachers. Just text me.
+GINA (sincerely): Thank you. We will.
+ALEXIS swats at her behind her back. She swats back.
+GINA: Hey, have a great day, buddy.
+BRUISER: You too, guys. See you around campus.
+BRUISER leaves. GINA and ALEXIS turn to each other immediately and their next lines are hissed.
+ALEXIS: What the hell? What the hell, Gina? Oh hell. This is horrible.
+GINA: We need friends.
+ALEXIS: Why would you say we'd go to yoga?
+GINA: Why would you say the thing about the ducks?
+ALEXIS: Because it was true, Gina, it's happening right now. But I guess you prefer convenient lies to harsh truths.
+GINA: WHAT? You don't know when I'm lying! We aren't the same person!!
+A brief silence.
+ALEXIS (giving in): You're right. I forgot.
+GINA: I know. It's hard to remember sometimes.
+ALEXIS: Look, you can go to yoga. I respect that. Madly. It'll be like that time I did something without you in November.
+GINA: That's exactly what I was thinking. Thanks, Alexis.
+ALEXIS: My pleasure.
+
+NEXT SCENE
+Into a yoga studio step mystery people, all in uniform yoga attire, hair slicked back in the same buns and burned with the same bleach. Soon, GINA enters, confused and a clear outlier.
+A man enters, closing the door with finality. It feels like the temperature keeps rising. He brings his hands to heart center.
+ALDEN: Let's flow.
+The neon lights blind then fade as the whole class assumes a Warrior Two pose facing the audience. But GINA's body stays in Child's Pose, ablaze in a deep red light. The crowd disperses in a uniform migration. The heartbeat slows, but continues.
+Eventually, it stops. ALEXIS enters the stage, which is empty except for GINA, in clearly non-yoga clothing (jeans) and a much cooler light. She begins shaking GINA's body.
+ALEXIS: Gina? Gina, you haven't spoken since you returned home 18 hours ago. I'm beginning to get worried. Speak now, Gina, or I'll think you're dead.
+GINA: I'm not dead.
+ALEXIS: Well, thank God. I was beginning to get worried.
+GINA: There's no easy way of saying this, Alexis, so I'll just say it.
+LONG pause.
+ALEXIS: Yes?
+GINA (bitterly): That yoga class is a cult. Everything that happened in that room was a cult ritual. They made me feel like a slick newborn baby still wet from the womb just because I couldn't carry my whole body weight on my two front arms.
+ALEXIS: Oh hell.
+GINA: Damn right. And Bruiser was just watching the whole time. She's like a member. A recruiter. With her beady crow eyes.
+ALEXIS: Gina, I told you. You don't ever have to go back.
+GINA: Except that I've... they've indoctrinated me. There's no going back now. I'm going back next Thursday.
+ALEXIS: Shit.
+GINA: Yeah. I just- I can't stand for this. What if we...
+GINA and ALEXIS have something of a mutual epiphany.
+ALEXIS & GINA: We expose them on social media!!
+ALEXIS: Do they allow phones?
+GINA: Yes, but we should sneak a bug in just to be safe.
+ALEXIS: My thoughts exactly. How about we hide it in your hair?
+GINA: Sounds perfect. Then we sync it to the cloud, post it everywhere-
+ALEXIS: -and we save SO. MANY. WOMEN.
+GINA: YES, and we become the number one feminists in the world.
+ALEXIS: And I win a medal.
+Slight pause.
+GINA: Why you?
+ALEXIS: Well, there's only one medal.
+Beat.
+GINA: What medal do you have in mind-
+ALEXIS: I AM LOOKING FOR A 2 MILLION DOLLAR GRANT FROM THE INTERNATIONAL WHISTLEBLOWER FOUNDATION.
+GINA: What?
+ALEXIS: Wait. Aren't there men that do these classes too?
+GINA: Yes, but also women. And if you save women, you're a feminist. Don't overthink The Plan.
+ALEXIS (sighing in resignation): You're right, of course. My plan is perfect.
+GINA: It is. How's next Thursday morning?
+ALEXIS (mocking voice): Well let me just check my Google Calendar real quick - oh wait, of course I'm going to this class. Doi!!
+They guffaw together at the idea of having and actively using a Google calendar.
+GINA: We're taking down these fuckers.
+
+[Note: Scenes skipped where Gina and Alexis go to yoga and post a video detailing the cult-like practices. Two months have passed.]
+
+NEXT SCENE
+It's the middle of the night.
+ALEXIS: Where are you going? Gina? Gina?
+GINA: I'm here, I'm here. I'm just up early.
+ALEXIS: This has never happened before in the history of the world. It's the middle of the night.
+GINA: It's 5am.
+ALEXIS: What's rustling? Where are you going?
+GINA: Nowhere.
+ALEXIS: You definitely are.
+ALEXIS turns the lights on. GINA is holding a yoga mat, hair straightened and tied back, in a baby blue yoga set with a matching water bottle.
+ALEXIS: Oh hell.
+GINA: Alexis, it's-
+ALEXIS: This is nothing like that time in November at all.
+GINA: I'm sorry. I'm so sorry. It's not what you think.
+ALEXIS: This was about exposing them. Silence. Now you're one of them. You're like a duck-billed platypus. 'Cause you suck.
+GINA: It started as an infiltration!! I was gathering more information. To expose him. But then Bruiser invited me to keep coming, and it just... I love you, Alexis-
+ALEXIS: You bastard.
+GINA: -But we need other people. Like, I took a friendship quiz on The New York Times about my social life, and it told me I have no friends.
+ALEXIS: Whereas I simply counted and came to the same conclusion. Except I thought I still had one. How long have you been doing this?
+GINA: 7 weeks.
+Silence.
+ALEXIS: You're banished to Bruiser's apartment.
+GINA: Alexis. Try a class and you'll see.
+ALEXIS: Oh, I am not a dunce, Gina! I'VE SEEN! And I really just saw pain and heat and a lot of blonde people trying to convince themselves they were doing it for them! Look at you. Is this the version of yourself you're choosing to love? Or just the version that's easiest for everyone else to? For Bruiser to?
+GINA: Maybe you don't get to talk to me about love.
+ALEXIS: Maybe you are banished from this house!
+GINA: MAYBE I AM BREAKING ALL THE SPOONS!!
+GINA runs through the kitchen headfirst and rips open the spoon drawer.
+ALEXIS: WHAT THE FUCK?
+GINA grabs one and bends it. She grabs another, cackling maniacally, bending and throwing it towards the window.
+ALEXIS: HOW DID YOU KNOW SO QUICKLY THIS WOULD BE WHAT YOU WOULD DO? HOLY SHIT! Gina, STOP!!
+GINA is spinning now, physically spinning so fast in the middle of the kitchen with spoons in her hands and screaming.
+ALEXIS: GINA!!! I AM PUSHING YOU OUT OF THIS APARTMENT IF YOU KEEP SPINNING!
+ALEXIS runs at GINA headfirst, grabbing her waist and pushing her towards the door.
+GINA: No. NO!
+ALEXIS: Goodbye!
+ALEXIS succeeds in pushing her out the door and shutting it. Then, they both collapse and cry intensely against opposite sides of the door.
+
+NEXT SCENE
+ALEXIS hits record. Makeup stains her face and she's sniffling, crouching in a bush somewhere.
+ALEXIS: To the 155 individuals who have viewed my last video. Thank you. I am returning to speak on a recent betrayal I have endured. Gina, my partner in crime, my best friend, has been overtaken by Alden's sick narrative. (Sighs) Gina was the love of my life. I cannot bear to live without her. I have realized I don't know how to do many common tasks. There is currently a squirrel running rabid circles around our room because I slept with the window completely open and awoke to its face above mine. In this situation, Gina would not have allowed herself to be chased out of her own apartment. I miss her. Mostly, however, I miss her personality. It's been a horrible 26 hours. I remember she would text me whenever she was about to chop an onion in the other room even though it really had no effect on me. That was just who she was, I guess. I would rather join her in blind faith than find my own without her. So, we are winning her back. Even if that means giving in. Now let's talk choreography.
+A squirrel jumps out of a tree onto ALEXIS' head. She screams mid-blackout.
+
+NEXT SCENE
+An early LA morning. ALEXIS arrives at a yoga studio carrying a huge speaker, blaring "My Shot" from Hamilton. BRUISER walks past.
+BRUISER: Alexis. Hi.
+ALEXIS: Hello Bruiser.
+BRUISER: Did you come to take a class?
+ALEXIS: What? No. Is Gina here?
+BRUISER: Um, I don't know. She said she would come and I should go without her. I gotta go, they lock the doors, but good luck, Alexis.
+ALEXIS stays for a long time. A few seconds later, GINA arrives carrying a tray of muffins.
+ALEXIS: Gina.
+GINA: Alexis.
+ALEXIS: I'm surprised this place is even still standing after our savage takedown.
+GINA: We got 155 views and 55 likes.
+ALEXIS: My point exactly.
+GINA: Look, I'm really sorry about the spoons. I realized just how dangerous it was. My own power almost killed us both. I won't do it again.
+ALEXIS: Gina. It's okay. I'm sorry I physically pushed you out of our house. It was a hateful action. I woke up ashamed. Then I fought a squirrel. Then I tried to make a flashmob, but no one showed up.
+GINA: Aw. Alexis. It's okay. (Offers muffin) I made muffins. They're carbon neutral.
+ALEXIS: That's incredible. How did you do this?
+GINA: I donated $1,000 to Tree People, and then I made muffins.
+ALEXIS: $1,000? It's working. Next time I'd try more like 2,000. Gina, why did you make these?
+GINA: Well. I had a nightmare last night that I was trapped inside a 93 degree yoga studio. And I looked in the mirror and my reflection was doing all these moves I can't, but I felt the pain and the heat and the sweat. And I just really wanted to talk to you.
+ALEXIS: I love you so much.
+GINA: I love you.
+They hug for a long time.
+GINA: Let's go home.
+ALEXIS: We can't.
+GINA: Why not?
+ALEXIS: There's a squirrel in our home right now.
+GINA: Fuck.
+ALEXIS: Yeah. He's not leaving.
+GINA: That's pretty bad. You know who'll chase off a squirrel?
+GINA & ALEXIS (in unison): One brave duck.
+
+THE END.</div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Mari Script -->
+    <div id="modal-mari" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-mari')">&times;</span>
+            <h2>TITLE: SUBURBIA</h2>
+            <p><em>This play is written by Mari. This is a play based on a suburban villa dream.</em></p>
+            <hr>
+            <div class="script-body">SCENE I
+(A suburban Villa dream, where the houses are neatly stacked the same distance from each other, with the same Spanish red roofs and arched front doors. Signs flash constantly, and bulletins of cyber blue and electric fuchsia bold print overshadow the faded, sickly leaves of the remaining trees.)
+
+(CASSIDY pulls into a drive through in a lime-green BMW and LOGANNE sits beside her in the passenger seat. Outside can be seen a large billboard displaying a skinny blonde woman holding a blue pill. It reads: LOSE TWENTY POUNDS OF FAT WITHIN THREE DAYS THROUGH HANAXLO. NOW AVAILABLE WITHOUT PRESCRIPTION IN ALL DRUGSTORES AND PHARMACIES.)
+
+CASSIDY: (One hand is on the steering wheel, pointing to the flashing sign) I want that.
+LOGANNE: You're skinny enough. You don't need it.
+(LOGANNE sends a text. Above the stage, a large screen displays the message: Love you dad, stay safe out there.)
+LOGANNE: You know the Villa is the sixth place I've lived in?
+CASSIDY: That's crazy. Sixteen years old and you're living in your sixth home already.
+LOGANNE: I don't even know if I want to call it that. I mean, three years later and we'd be out of the rental house anyway. My dad will get sent to another duty station and we'll move again.
+CASSIDY: I would get SO tired of that much moving around, I don't know how you do it.
+LOGANNE: People used to actually make fun of me for it.
+CASSIDY: (Indifferent, scrolling phone) Wait, really? Who?
+LOGANNE: Literally every single kid at my middle school. I'd get called "the military brat." Oh my god, they would all match in their same floral-pastel smocked tube tops, and then talk about how "my parents must not care about me that much since they just dumped me at school with whatever clothes on".
+(CASSIDY stares for a moment, barely listening, before turning back to her phone.)
+LOGANNE: Whatever, it's not like I cared anyway. I was completely fine sitting outside, on my own, with my archeology maps and toolkits that Nana had given to me. (Beat) Besides, everything they said was true.
+(LOGANNE looks out the window at flashing advertisements.)
+LOGANNE: Did you hear about the robbery?
+CASSIDY: No.
+LOGANNE: Some people in Villa hacked into the retail system hardwares and stole money from purchased LVTS. Over a trillion dollars.
+CASSIDY: Oh my God, I've got to hear which one's got stolen.
+LOGANNE: The Chanel ones. They stole money from the virtual alligator maxi, caviar quilted, and Christmas exclusive purses. Those have been the hottest, and sellers are putting them up to almost a billion for one. It's outrageous. That much for a digital image of something. You don't even wear it.
+CASSIDY: It's status. Seriously. Helps even in a job application. Who wouldn't want a digital collection too? And you can get exclusives that are hard to find in stores.
+LOGANNE: Might as well get the real thing, even if it's not exclusive. Not that many people would even know you had some special virtual-digital purse.
+CASSIDY: That's why everyone talks about what they have. But no way, I thought it was like max security, right? But hear me out. It's fine because at least the people who bought the bags still have their virtual copy. They can still show it off, so status intact. Do you wanna get botox with me tomorrow? I wanna get some for my eyebrows.
+(In front of them, a botox ad flashes: EXCLUSIVE DEALS FOR WORLD PLASTIC SURGERY DAY. AS LOW AS $400 PER UNIT)
+LOGANNE: Aren't you broke by now?
+(Lights shift to LOGANNE.)
+LOGANNE: Riding in Cassie's car, I do feel more alive. At least more alive than I do at my house, which is filled with my mother's sequined ball gowns squished together like we are in a costume shop. Because Dad's military benefits allowed her to spend a lot of money on luxuries. I've seen her closet maybe three or four times. She is always in there... Her closet is fucking insane. There are rows and rows of clothes perfectly arranged by colour and size. And at the end of the room she has her huge TV that shows off all her LVTs. It rotates between different slides but she says it's not possible to see the same dress or purse twice because she has over a million pieces... I remember wondering why I didn't look like her at all.
+
+(They reach the intercom.)
+CASSIDY: You just asked me if I was broke? I think I actually saved some money today because I told myself I was just gonna do the deals and rewards...
+(A black box passes a menu book through the window.)
+LOGANNE: I think I'm just gonna get the chicken nuggets.
+LOGANNE: Hi. Just the five piece chicken nuggets please.
+INTERCOM: Five piece chicken nuggets, made organically from synthetically grown chicken eggs genetically created by Stewart's Principles Growth, Alteration and Mutation, deep-fried in a heavy-duty oil bath.
+LOGANNE: Is this satire?
+CASSIDY: What's satire? Can I have the goddess caesar salad with extra ranch, and with the organic lettuce and not the artificial one?
+INTERCOM: There is an extra charge of 20 dollars.
+CASSIDY: That's fine. And also the diet chocolate chip cookie with the fat-free artificial sugar chips.
+INTERCOM: Total is seventy-five dollars and eighty-three cents.
+LOGANNE: Is this menu a joke? And thank you, I know McDonalds is really getting expensive.
+CASSIDY: I haven't seen the menu be this long before. But it's fine... invasion is so real these days.
+LOGANNE: Inflation? True.
+(LOGANNE's phone displays text from her dad: "Love you sweetheart. Sorry we have to move around so much. But I hope Villa isn't too bad!")
+(They reach the pickup station—a dark circular hole.)
+LOGANNE: God, why is it so dark?
+(CASSIDY grabs the bag; LOGANNE reaches in.)
+LOGANNE: Is my food in here? I can't find it. Cassie? I don't feel it. It's like...smooth. Do you have hand sanitizer?
+CASSIDY: No, sorry. Just reach more towards the centre.
+(LOGANNE reaches further as country music distorts and slows. Screams echo as lights shift to deep crimson.)
+MOTHER'S VOICE: Jesus Christ, please come back. Please let my soul be free. Jesus Christ, I need to be forgiven... I am sorry for everything. I am sorry for what I wanted and for the things I chose over people...
+(The ENSEMBLE enters, representing body parts and jewelry, surrounding LOGANNE.)
+LOGANNE: I can feel her head. Silky. Long. Perfectly straight. Her Golden South Sea pearls clasped around her neck.
+(The ensemble pulls chains tightly around LOGANNE. Screams intensify. CASSIDY reaches back, pulling LOGANNE free from the darkness into an embrace.)
+LOGANNE (softly): Cassie.
+(The ensemble vanishes into darkness. They return to the car.)
+CASSIDY: Did you get your food?
+(Blackout.)</div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Renee Script -->
+    <div id="modal-renee" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('modal-renee')">&times;</span>
+            <h2>TITLE: Early Decision</h2>
+            <p><em>This is a play written by Renee to focus on the fear and anxiety highschoolers feel about applying to college.</em></p>
+            <hr>
+            <div class="script-body">SCENE I. AUGUST
+(QUINN and ANDY sit on the balcony of a New York City apartment building dangling their legs. They pass a cigarette back and forth.)
+
+QUINN: I sort of can't believe we're here already. Like Jesus, has it really been three years? I feel like I had freshman orientation literally a month ago.
+ANDY: No seriously. I don't think it's hit me yet that this is our last year of school. HA after this year I never have to take a math class ever again. Oh my god am I so excited to be done with math forever.
+QUINN: Do you remember who you got for bio this year?
+ANDY: Dr. Z
+QUINN: fuck
+ANDY: yeah, it will be a shitty shitty year.
+QUINN: It honestly freaks me out a little... it feels like high school will last forever, then suddenly and in a shocking turn of events it's August and everything we do is a "last" of something and jesus fuck I'm sort of freaking out. Give me the cig back.
+ANDY: I think maybe you're thinking about this in the wrong way. Senior year is exciting! You should be excited! Aren't you excited for it to just be over?
+QUINN: Yeah right, Mr. Overachiever, you would have nothing to worry about... I feel like I have a reason to be stressed.
+ANDY: Just because I'm, like, good at school or whatever doesn't make me free from freaking out about stuff... but fun fact you can sort of just decide to, like, not care as much.
+QUINN: yeah I bet it's easy not to freak out when you already have perfect grades. not all of us are Andy fucking Benson.
+
+SCENE II. OCTOBER
+(ANDY and QUINN on the balcony.)
+ANDY: oh my fucking god I hate math so much. Merriweather.
+QUINN: I think she enjoys the suffering of her students.
+ANDY: Are you excited for college app seminar tomorrow?
+QUINN: That's not a serious question right? Nothing is worse than being stuck with Mr. Milton for an hour.
+ANDY: also I still think it's insane we only have ten activity slots for all of high school. What was the point of doing all the things we did to only fill it into ten slots.
+QUINN: Complain all you want Andy, but having more activities than slots is a great problem to have... I mean, that's how the whole college thing is, right? One massive fucking contradiction. You need a TON of activities, but you can't be a faker. You have to have good grades, but good grades aren't enough. You have to have figured out exactly what you want from age twelve... and my parents are telling me these are the best years of my life? This is seriously as good as it gets??
+ANDY: It really does suck, doesn't it.
+QUINN: Yeah, it really does.
+
+SCENE III. MARCH
+(Rainy balcony. They share a cigarette under the overhang.)
+ANDY: Are you nervous for tomorrow?
+QUINN: Yeah sort of. I'm more resigned to my fate.
+ANDY: You're going to get in. I'm envisioning it for you. 6pm tomorrow, Yale acceptance!
+QUINN: It's so pretty and old and classical... it's going to be really really shitty if I get rejected.
+ANDY: Seriously Quinn, it's going to be fine.
+QUINN: Easy for you to say, you already know you got into Penn. The worst bit is over for you.
+ANDY: What's the worst case scenario, that you don't get in? You'll be fine!
+QUINN (angrily): Everyone keeps telling me that, but you know that doesn't fucking mean anything! Literally every adult goes around reminding us this is the most important thing... Come on Andy, I know you were a lock with your fucking 1580 and 4.0 but the rest of us actually get stressed about this sort of thing!
+ANDY: Jesus, sorry Quinn. I'm just trying to help you.
+QUINN: Well you're not. God you're so fucking perfect I hate you.
+(Tense silence.)
+QUINN (whispering): I really hope I get in.
+
+SCENE IV. MAY
+(Sitting on the balcony in graduation robes, smoking cigars.)
+ANDY: I still think it's fucking crazy you got to give the commencement speech.
+QUINN: Hey, I was voted by the grade. The wonders of democracy.
+ANDY: Did you actually mean what you said? In your speech?
+QUINN: What, about the whole grade being lifelong friends? Fuck no. I am never speaking to Aiden Jones ever again.
+ANDY: No, the whole part about hard work being worth it.
+QUINN: I don't know. It just felt like the right thing to say. But if I wasn't giving the speech it's what I would have wanted someone to tell me.
+ANDY: I'm really sorry again. I know how much you wanted to go there.
+QUINN: Yeah, it is what it is. I've done enough crying about it.
+ANDY: Are you at least excited for gap year? Studying Latin... in Florence... for a whole year...
+QUINN: Yeah! I am pretty excited. My life doesn't begin and end with where I go to college. I think I'll be okay. It might suck now, but I think I'll be okay. Or at least, I really really hope so.</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Student Performing Arts Showcase. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Modals -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close modal when clicking outside of modal-content
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
