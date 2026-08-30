@@ -26,6 +26,42 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Custom inline styles to match header branding and spacing from reference image -->
+  <style>
+    .header {
+      background: #ffffff;
+      border-bottom: 1px solid #eaeaea;
+      padding: 20px 0;
+    }
+    .sitename {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      color: #2b3e50;
+      margin: 0;
+    }
+    .navmenu ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+      align-items: center;
+      gap: 25px;
+    }
+    .navmenu a {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #222222;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .navmenu a:hover,
+    .navmenu a.active {
+      color: #3b82f6;
+    }
+  </style>
+
   <!-- =======================================================
   * Template Name: Poesis
   * Template URL: https://bootstrapmade.com/Poesis-bootstrap-blog-template/
@@ -40,8 +76,7 @@
   <header id="header" class="header d-flex align-items-center position-relative">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0 text-decoration-none">
         <h1 class="sitename">Poesis</h1>
       </a>
 
@@ -66,24 +101,12 @@
   <main class="main">
 
     <!-- Page Title Section -->
-    <div class="page-title" data-aos="fade">
-      <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Visual Arts</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Visual Arts</li>
-          </ol>
-        </nav>
-      </div>
-    </div><!-- End Page Title -->
-
-    <!-- Intro Section -->
-    <section id="intro-section" class="intro-section section">
-      <div class="container" data-aos="fade-up">
+    <div class="page-title my-5" data-aos="fade">
+      <div class="container text-center">
+        <h1 class="fw-bold display-4 text-dark mb-4">Visual Arts</h1>
         <div class="row">
-          <div class="col-lg-10 mx-auto text-center">
-            <p class="lead">
+          <div class="col-lg-10 mx-auto">
+            <p class="lead text-secondary" style="line-height: 1.7; font-size: 1.15rem;">
               Visual arts are ingrained in the act of looking at the world beyond the surface level. 
               The visual arts are anchored to learning how to question the world around us and to convey thoughts/critiques visually. 
               We live in a world where we are constantly exposed to visuals, whether it be an endless stream of Instagram reels or bright, flashy YouTube videos. 
@@ -93,7 +116,7 @@
           </div>
         </div>
       </div>
-    </section><!-- End Intro Section -->
+    </div><!-- End Page Title -->
 
     <!-- Category Grid Section -->
     <section id="category-grid-section" class="category-grid-section section pt-0">
@@ -130,9 +153,8 @@
     <section id="articles-section" class="articles-section section">
       <div class="container" data-aos="fade-up">
         
-        <div class="section-title">
+        <div class="section-title text-center mb-4">
           <h2>Articles</h2>
-          <span class="description-title">Articles</span>
         </div>
 
         <div class="row">
@@ -152,26 +174,25 @@
     </section><!-- End Articles Section -->
 
     <!-- Artworks Section -->
-    <section id="artworks-section" class="artworks-section section bg-light">
+    <section id="artworks-section" class="artworks-section section bg-light py-5">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        <div class="section-title text-center mb-4">
           <h2>Artworks</h2>
-          <span class="description-title">Artworks</span>
         </div>
 
         <div class="row gy-4">
 
           <!-- Artwork 1 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="blog-card h-100">
+            <div class="blog-card h-100 bg-white rounded shadow-sm overflow-hidden">
               <div class="blog-image">
                 <a href="va_artwork1.html">
                   <img src="va_hannah.jpg" alt="Small choice. big outcome" class="img-fluid w-100" style="height: 250px; object-fit: cover;" loading="lazy">
                 </a>
               </div>
-              <div class="blog-content">
-                <h3><a href="va_artwork1.html">Small choice . big outcome</a></h3>
+              <div class="blog-content p-3">
+                <h3 class="h5"><a href="va_artwork1.html" class="text-decoration-none text-dark">Small choice . big outcome</a></h3>
                 <p class="text-muted m-0">by Hannah</p>
               </div>
             </div>
@@ -179,14 +200,14 @@
 
           <!-- Artwork 2 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="blog-card h-100">
+            <div class="blog-card h-100 bg-white rounded shadow-sm overflow-hidden">
               <div class="blog-image">
                 <a href="va_artwork2.html">
                   <img src="va_stilllife.jpg" alt="Still life" class="img-fluid w-100" style="height: 250px; object-fit: cover;" loading="lazy">
                 </a>
               </div>
-              <div class="blog-content">
-                <h3><a href="va_artwork2.html">Still life</a></h3>
+              <div class="blog-content p-3">
+                <h3 class="h5"><a href="va_artwork2.html" class="text-decoration-none text-dark">Still life</a></h3>
                 <p class="text-muted m-0">by Hannah</p>
               </div>
             </div>
@@ -194,14 +215,14 @@
 
           <!-- Artwork 3 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="blog-card h-100">
+            <div class="blog-card h-100 bg-white rounded shadow-sm overflow-hidden">
               <div class="blog-image">
                 <a href="va_artwork3.html">
                   <img src="va_environmental.jpg" alt="Environmental Awareness Art" class="img-fluid w-100" style="height: 250px; object-fit: cover;" loading="lazy">
                 </a>
               </div>
-              <div class="blog-content">
-                <h3><a href="va_artwork3.html">Environmental Awareness Art</a></h3>
+              <div class="blog-content p-3">
+                <h3 class="h5"><a href="va_artwork3.html" class="text-decoration-none text-dark">Environmental Awareness Art</a></h3>
                 <p class="text-muted m-0">by Yunnie</p>
               </div>
             </div>
@@ -214,12 +235,12 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
+  <footer id="footer" class="footer dark-background py-5 bg-dark text-white">
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Poesis</span>
+          <a href="index.html" class="logo d-flex align-items-center text-white text-decoration-none">
+            <span class="sitename text-white">Poesis</span>
           </a>
           <div class="footer-contact pt-3">
             <p><strong>Email:</strong> <span>info@example.com</span></p>
@@ -228,29 +249,29 @@
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="literaryarts.html">Literary Arts</a></li>
-            <li><a href="visualarts.html">Visual Arts</a></li>
-            <li><a href="author-profile.html">About the Founder</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+            <li><a href="literaryarts.html" class="text-white-50 text-decoration-none">Literary Arts</a></li>
+            <li><a href="visualarts.html" class="text-white-50 text-decoration-none">Visual Arts</a></li>
+            <li><a href="author-profile.html" class="text-white-50 text-decoration-none">About the Founder</a></li>
+            <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Categories</h4>
-          <ul>
-            <li><a href="mediaarts.html">Media Arts</a></li>
-            <li><a href="tc.html">Traditional Crafts</a></li>
-            <li><a href="performing.html">Performing Arts</a></li>
-            <li><a href="languagearts.html">Language Arts</a></li>
+          <ul class="list-unstyled">
+            <li><a href="mediaarts.html" class="text-white-50 text-decoration-none">Media Arts</a></li>
+            <li><a href="tc.html" class="text-white-50 text-decoration-none">Traditional Crafts</a></li>
+            <li><a href="performing.html" class="text-white-50 text-decoration-none">Performing Arts</a></li>
+            <li><a href="languagearts.html" class="text-white-50 text-decoration-none">Language Arts</a></li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Poesis</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename text-white">Poesis</strong> <span>All Rights Reserved</span></p>
     </div>
   </footer>
 
