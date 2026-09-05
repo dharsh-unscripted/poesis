@@ -40,4 +40,3 @@
 
   echo $contact->send();
 ?>
-
